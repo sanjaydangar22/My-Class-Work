@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp"
+    android:layout_height="match_parent"
+    tools:context=".YogaAgnistmbhasanActivity">
+
+
+        <!--    toolbar-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.9"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:src="@drawable/arrow_back"
+                app:tint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_50sdp"
+                android:text="YOGA"
+                android:textColor="#4B085C"
+                android:textSize="@dimen/_35ssp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agnistambhasana (Firelog Pose, Double Pigeon Pose)"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_5sdp"
+                android:src="@drawable/agnistambhasana" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Agnistambhasana meaning – Agnistambhasana is a Sanskrit word if agnistambhasana pronounced is Agni + Stambh + Asana which is composed of a combination of three words. In which Agni is called Fire, the Stambh means pillar and posture means an asana, mudra, or mudra. From the position of the original bent legs, the shins are placed one above the other by placing the left lower leg above the right knee, then sliding the right foot forward until it is below the left knee. With a level back, folds up the abdominal area to advance." />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="Agnistambhasana can be understood in such a way that it is done with a simple cross-legged position, with the left ankle above the right knee keeping the shins stacked on top of each other, then sliding the right leg forward until It does not fall below the left knee. With a flat back, the upper body bends forward to deepen the stretch. And this can also be repeated on the other side for balance." />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text=" This posture is also called by many other names such as – Burning Log Pose, Double Pigeon Pose, and Fire Log Pose. This pose falls under the intermediate level and is a hip opening posture." />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Agnistambhasana (Fire log Pose) Steps: The right to do Corpse Pose"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1)- First, you sit in a simple or cross-leg position on a thick or folded blanket, that is, bend your knees and let your feet be on the blanket as well." />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2)- Now distribute your weight evenly between your right and left sides. On one breath, with the power of both hand claws, lift your shoulders up, roll them back, and then relax your hands." />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3)- Lift all your ribs equally. Pull your navel in and up, and extend your front body from just above the pubis to just below the sternum." />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4)- Now next, slide your left foot under your right foot. Flex your left foot, and place the little toe on the floor. Start conservatively, respecting the potential limitations of your knees by keeping your left leg close to the bone while sitting on your right." />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5)- Now use your hands to lift your right calf, hold the right knee with your right hand, and place your left hand under your flexible right leg." />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6)- Unleash your entire lower leg, as if it were a piece from knee to ankle, and stack the right ankle above the left knee. Keep the outer edge of your right foot parallel with the floor (do not sickle the leg)." />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="7)- Remain in this pose for 1 or 3 minutes. Exhale and release the posture, sit comfortably in Sukhasana (relaxed posture). Repeat the process with the left leg on top." />
+
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+</LinearLayout>

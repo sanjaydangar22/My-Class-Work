@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    android:orientation="vertical"
+    tools:context=".Activity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="@string/page2_tital"
+        android:textColor="#0E0E0E"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="50dp"
+        android:hint="@string/singup_fname"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:textColor="#00897B"
+        android:textColorHint="#00897B" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/singup_email"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:textColor="#ED0B0B"
+        android:textColorHint="#EF0606" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:hint="@string/singup_pass"
+        android:background="@color/white"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp"
+        android:imeOptions="actionNext"
+        android:inputType="numberPassword"
+        android:textColorHint="#0E0E0E" />
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingHorizontal="10dp"
+        android:layout_weight="1"
+        android:paddingVertical="10dp"
+
+        android:layout_marginTop="10dp"
+        android:hint="@string/singup_c_pass"
+        android:imeOptions="actionDone"
+        android:inputType="numberPassword"
+        android:textColorHint="#131313" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/loginbutton"
+        android:paddingHorizontal="20dp"
+        android:text="@string/singup_button"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+</LinearLayout>
+

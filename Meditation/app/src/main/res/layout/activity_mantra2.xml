@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#9DD1EA"
+    tools:context=".Mantra2Activity">
+
+    <!--    toolbar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="@dimen/_40sdp"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/round"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:src="@drawable/arrow_back"
+            app:tint="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_50sdp"
+            android:text="Mantra"
+            android:textColor="#4B085C"
+            android:textSize="@dimen/_35ssp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!--            Line1-->
+            <TextView
+                android:id="@+id/txtSiva"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/round"
+                android:paddingVertical="@dimen/_5sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_40sdp"
+                android:backgroundTint="@color/white"
+                android:text="शिव"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20ssp" />
+            <!--            Line2-->
+            <TextView
+                android:id="@+id/txtParvati"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/round"
+                android:paddingVertical="@dimen/_5sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_40sdp"
+                android:backgroundTint="@color/purple_700"
+                android:text="पार्वती"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20ssp" />
+            <!--            Line3-->
+            <TextView
+                android:id="@+id/txtVishnu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/round"
+                android:paddingVertical="@dimen/_5sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_40sdp"
+                android:backgroundTint="@color/white"
+                android:text="विष्णु"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20ssp" />
+            <!--            Line4-->
+            <TextView
+                android:id="@+id/txtLaxmi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/round"
+                android:paddingVertical="@dimen/_5sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_40sdp"
+                android:backgroundTint="@color/white"
+                android:text="लक्ष्मी"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20ssp" />
+            <!--            Line5-->
+            <TextView
+                android:id="@+id/txtBrahmdev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/round"
+                android:paddingVertical="@dimen/_5sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_40sdp"
+                android:backgroundTint="@color/white"
+                android:text="ब्रह्मदेव"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20ssp" />
+
+            <!--            Line6-->
+            <TextView
+                android:id="@+id/txtsaraswati"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/round"
+                android:paddingVertical="@dimen/_5sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_40sdp"
+                android:backgroundTint="@color/white"
+                android:text="सरस्वती"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20ssp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--line1-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardElevation="@dimen/_20sdp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_5sdp"
+                        android:layout_height="match_parent"
+                        android:background="#06BCA9" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="नमो देव्यै महादेव्यै शिवायै सततं नम:।"
+                            android:textSize="@dimen/_12ssp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="नम: प्रकृत्यै भदायै नियता: प्रणता: स्मताम्।।"
+                            android:textSize="@dimen/_12ssp"
+                            android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:background="@drawable/round"
+                                android:padding="@dimen/_5sdp"
+                                android:text="पार्वती"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp" />
+
+                            <TextView
+                                android:background="@drawable/round"
+                                android:paddingVertical="@dimen/_5sdp"
+                                android:backgroundTint="#70CAF6"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:layout_width="wrap_content"
+                                android:textColor="#090808"
+                                android:layout_height="wrap_content"
+                                android:text="Read More >"
+                                android:layout_marginStart="@dimen/_110sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <!--line2-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardElevation="@dimen/_20sdp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_5sdp"
+                        android:layout_height="match_parent"
+                        android:background="#039BE5" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="या देवी सर्वभूतेषु शक्तिरूपेण संस्थिता :।"
+                            android:textSize="@dimen/_12ssp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="नमस्तस्यै, नमस्तस्यै, नमस्तस्यै नमो नम:।।"
+                            android:textSize="@dimen/_12ssp"
+                            android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:background="@drawable/round"
+                                android:padding="@dimen/_5sdp"
+                                android:text="पार्वती"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp" />
+
+                            <TextView
+                                android:background="@drawable/round"
+                                android:paddingVertical="@dimen/_5sdp"
+                                android:backgroundTint="#70CAF6"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:layout_width="wrap_content"
+                                android:textColor="#090808"
+                                android:layout_height="wrap_content"
+                                android:text="Read More >"
+                                android:layout_marginStart="@dimen/_110sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <!--line3-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardElevation="@dimen/_20sdp">
+
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_5sdp"
+                        android:layout_height="match_parent"
+                        android:background="#06BCA9" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="सर्व मंगल मांगल्ये शिवे सर्वार्थ साधिके |"
+                            android:textSize="@dimen/_12ssp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="शरण्ये त्रयम्बके गौरी नारायणी नमोस्तुते || "
+                            android:textSize="@dimen/_12ssp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" शिवोऽहं शिवोऽहम् ||"
+                            android:textSize="@dimen/_12ssp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:background="@drawable/round"
+                                android:padding="@dimen/_5sdp"
+                                android:text="पार्वती"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15ssp" />
+
+                            <TextView
+                                android:background="@drawable/round"
+                                android:paddingVertical="@dimen/_5sdp"
+                                android:backgroundTint="#70CAF6"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:layout_width="wrap_content"
+                                android:textColor="#090808"
+                                android:layout_height="wrap_content"
+                                android:text="Read More >"
+                                android:layout_marginStart="@dimen/_110sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:textSize="@dimen/_15ssp"
+                                android:textStyle="bold"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

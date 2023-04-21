@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSimple"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        android:text="Simple"
+        android:textSize="@dimen/_20ssp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogin"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:background="#39EDD8"
+        android:layout_margin="@dimen/_20sdp"
+        android:text="Login"
+        android:textSize="@dimen/_20ssp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnUpdate"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        android:text="Update"
+        android:padding="@dimen/_10sdp"
+        android:background="#1D99DD"
+        android:textSize="@dimen/_20ssp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAlert"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        android:padding="@dimen/_10sdp"
+        android:background="#F8AA59"
+        android:text="Alert"
+        android:textSize="@dimen/_20ssp" />
+
+
+</LinearLayout>

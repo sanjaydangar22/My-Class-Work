@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B9DDEF"
+    android:orientation="vertical"
+    tools:context=".LanguageActivity">
+<!--    om-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:src="@drawable/omt"/>   </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:src="@drawable/omt"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+<!--    Main View-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        app:cardElevation="@dimen/_20sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        android:layout_margin="@dimen/_30sdp"
+        app:cardBackgroundColor="#E53935"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Bharatavars"
+        android:padding="@dimen/_20sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_30ssp"/>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="Select Your app Language :-"
+        android:textSize="@dimen/_15sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:textStyle="bold" />
+<RadioGroup
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RadioButton
+        android:id="@+id/rbEnglish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="English"
+        android:textColor="#CF042C"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold" />
+
+    <RadioButton
+        android:id="@+id/rbGujarati"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gujarati"
+        android:textColor="#CF042C"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold" />
+
+</RadioGroup>
+
+<!--        <Spinner-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/spiLanguage"/>-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+       android:textStyle="bold"
+        android:text="Click" />
+    </LinearLayout>
+    <!--    om-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:gravity="start"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:src="@drawable/omt"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:src="@drawable/omt"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

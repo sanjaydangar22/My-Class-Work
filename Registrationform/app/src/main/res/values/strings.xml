@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Registration form</string>
+
+                      <!---login page-->
+    <string name="page1_tital">Login </string>
+    <string name="login_username">Enter your Username</string>
+    <string name="login_password">Enter your Password</string>
+    <string name="login_button">Sing in</string>
+    <string name="registration">New Registration</string>
+
+                     <!---Sing up page-->
+    <string name="page2_tital">Registration From</string>
+    <string name="singup_fname"> Enter Your First Name </string>
+    <string name="singup_sname"> Enter Your Second Name </string>
+    <string name="singup_mobil"> Enter Your mobil number </string>
+    <string name="singup_email"> Enter Your Email </string>
+    <string name="singup_pass">Enter your Password</string>
+    <string name="singup_c_pass">Enter your Confirm Password</string>
+    <string name="singup_button">Registration</string>
+
+</resources>

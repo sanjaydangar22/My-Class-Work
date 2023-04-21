@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDD835"
+    tools:context=".MainActivity">
+
+
+
+    <ImageView
+        android:src="@drawable/img"
+        android:id="@+id/imgLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30sp"
+        android:scaleType="fitXY"/>
+
+
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgLogo"
+        android:layout_marginHorizontal="20sp"
+        android:layout_marginBottom="10sp"
+        android:hint="Enter Your Name"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:textColor="#1E88E5"
+        android:textColorHint="#8E24AA" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtName"
+        android:layout_marginHorizontal="20sp"
+        android:layout_marginBottom="10sp"
+        android:hint="Enter Your Email"
+        android:imeOptions="actionNext"
+        android:layout_marginTop="20sp"
+        android:inputType="textEmailAddress"
+        android:textColor="#1E88E5"
+        android:textColorHint="#8E24AA" />
+
+    <EditText
+        android:id="@+id/edtNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtEmail"
+        android:layout_marginTop="20sp"
+        android:layout_marginHorizontal="20sp"
+        android:layout_marginBottom="10sp"
+        android:hint="Enter Your Mobil Number"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:textColor="#1E88E5"
+        android:textColorHint="#8E24AA" />
+
+    <!--    Password & Confirm Password-->
+    <LinearLayout
+        android:id="@+id/linPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtNumber"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="10sp">
+
+        <!--Password-->
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20sp"
+            android:layout_weight="1"
+            android:hint="Enter  Password"
+            android:imeOptions="actionNext"
+            android:inputType="numberPassword"
+            android:textColor="#1E88E5"
+            android:textColorHint="#8E24AA" />
+
+        <!--    Confirm Password-->
+        <EditText
+            android:id="@+id/edtCPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20sp"
+            android:layout_weight="1"
+            android:hint="Confirm Password"
+            android:imeOptions="actionDone"
+            android:inputType="numberPassword"
+            android:textColor="#1E88E5"
+            android:textColorHint="#8E24AA" />
+
+    </LinearLayout>
+
+    <!--    Check Box-->
+    <LinearLayout
+        android:id="@+id/linchk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linPass"
+        android:layout_marginBottom="10sp">
+
+        <!--        Check Box 1-->
+        <CheckBox
+            android:id="@+id/chkReading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reading"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!--        Check Box 2-->
+        <CheckBox
+            android:id="@+id/chkWriting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Writing"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!--        Check Box 3-->
+        <CheckBox
+            android:id="@+id/chkSinging"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Singing"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+<!--    Radio Button-->
+<LinearLayout
+    android:id="@+id/linRadio"
+    android:layout_below="@+id/linchk"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RadioGroup
+        android:orientation="horizontal"
+        android:id="@+id/rgGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbMale"
+                android:layout_width="match_parent"
+                android:text="Male"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/rbFeMale"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="FeMale"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/rbOther"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="Other"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+
+    </RadioGroup>
+</LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linRadio"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Submit" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSubmit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Clear" />
+
+
+</RelativeLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2"
+    tools:context=".MainActivity">
+
+    <!--    Tital-->
+    <TextView
+        android:id="@+id/txtTital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="20sp"
+        android:text="Registion From"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <!--    Name-->
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTital"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginVertical="20sp"
+        android:background="@drawable/custtom"
+        android:hint="Enter your Name"
+        android:padding="20sp" />
+
+    <!--    Email-->
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtName"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginVertical="20sp"
+        android:background="@drawable/custtom"
+        android:hint="Enter your Email"
+        android:padding="20sp" />
+
+    <!-- Password &  Confirm Password-->
+    <LinearLayout
+        android:id="@+id/linLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtEmail"
+        android:layout_marginVertical="20sp"
+        android:weightSum="2">
+
+        <!--    Password-->
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20sp"
+            android:layout_weight="1"
+            android:background="@drawable/custtom"
+            android:hint="Enter password"
+            android:padding="20sp" />
+
+        <!--   Confirm Password-->
+        <EditText
+            android:id="@+id/edtCPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20sp"
+            android:layout_weight="1"
+            android:background="@drawable/custtom"
+            android:hint="Confim password"
+            android:padding="20sp" />
+    </LinearLayout>
+
+    <!--    CheckBox-->
+   <LinearLayout
+       android:id="@+id/LinChk"
+       android:layout_below="@+id/linLayout"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <CheckBox
+           android:id="@+id/chkRidding"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:text="Ridding"
+           android:textSize="20sp"/>
+       <CheckBox
+           android:id="@+id/chkWriting"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:text="Wrting"
+           android:textSize="20sp"/>
+       <CheckBox
+           android:id="@+id/chkSinging"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:text="Singing"
+           android:textSize="20sp"/>
+
+   </LinearLayout>
+
+    <!--    Submit Button-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LinChk"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="20dp"
+        android:background="#FB8C00"
+        android:text="Submit" />
+
+<!--    Copyright-->
+    <TextView
+        android:id="@+id/edtCopy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CopyRight @RG"
+        android:textSize="20sp"
+        android:layout_below="@+id/btnSubmit"
+        android:layout_marginTop="40sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/areo"
+        android:layout_marginBottom="30sp"
+        android:layout_marginRight="70sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        />
+
+
+</RelativeLayout>

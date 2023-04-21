@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">Meditation</string>
+    <!--    What is Meditation-->
+    <string name="meditation">       Meditation is a practice in which an individual uses a technique – such as mindfulness, or focusing the mind on a particular object, thought, or activity – to train attention and awareness, and achieve a mentally clear and emotionally calm and stable state.
+
+Meditation is practiced in numerous religious traditions.</string>
+    <string name="meditation1">    The earliest records of meditation (dhyana) are found in the Upanishads, and meditation plays a salient role in the contemplative repertoire of Jainism, Buddhism and Hinduism. Since the 19th century, Asian meditative techniques have spread to other cultures where they have also found application in non-spiritual contexts, such as business and health.
+
+    Meditation may significantly reduce stress, anxiety, depression, and pain, and enhance peace, perception, self-concept, and well-being. Research is ongoing to better understand the effects of meditation on health (psychological, neurological, and cardiovascular) and other areas.</string>
+
+    <!--   Why larn Meditation-->
+    <string name="why_larn_meditation">   While meditation isn’t a cure-all, it can certainly provide some much-needed space in your life. Sometimes, that’s all we need to make better choices for ourselves, our families, and our communities. And the most important tools you can bring with you to your meditation practice are a little patience, some kindness for yourself, and a comfortable place to sit.
+
+When we meditate, we inject far-reaching and long-lasting benefits into our lives. And bonus: you don’t need any extra gear or an expensive membership.
+</string>
+
+    <!--    How to Meditation-->
+    <string name="how_to_meditate">Meditation is simpler (and harder) than most people think. Read these steps, make sure you’re somewhere where you can relax into this process, set a timer, and give it a shot:</string>
+    <string name="take_seat"> 1) Take a seat</string>
+    <string name="take_seat_data">Find place to sit that feels calm and quiet to you.</string>
+
+    <string name="set_time"> 2) Set a time limit</string>
+    <string name="set_time_data"> If you’re just beginning, it can help to choose a short time, such as five or 10 minutes.</string>
+
+    <string name="notice_body">3) Notice your body</string>
+    <string name="notice_body_data">You can sit in a chair with your feet on the floor, you can sit loosely cross-legged, you can kneel—all are fine. Just make sure you are stable and in a position you can stay in for a while.</string>
+
+    <string name="feel_breath">4) Feel your breath</string>
+    <string name="feel_breath_data">Follow the sensation of your breath as it goes in and as it goes out.</string>
+
+    <string name="notice_mind">5) Notice when your mind has wandered</string>
+    <string name="notice_mind_data">Inevitably, your attention will leave the breath and wander to other places. When you get around to noticing that your mind has wandered—in a few seconds, a minute, five minutes—simply return your attention to the breath.</string>
+
+    <string name="be_kind">6) Be kind to your wandering mind</string>
+    <string name="be_kind_data">Don’t judge yourself or obsess over the content of the thoughts you find yourself lost in. Just come back.</string>
+
+    <string name="close_kind">7) Close with kindness</string>
+    <string name="close_kind_data">When you’re ready, gently lift your gaze (if your eyes are closed, open them). Take a moment and notice any sounds in the environment. Notice how your body feels right now. Notice your thoughts and emotions.</string>
+    <string name="description">Description:</string>
+    <string name="description_data">That’s it! That’s the practice. You focus your attention, your mind wanders, you bring it back, and you try to do it as kindly as possible (as many times as you need to).</string>
+
+    <!--    Meditation Chakra and Mantra -->
+    <string name="chakra">Each chakra gets activated, cleansed, and balanced through a particular Bija Mantra. But before we learn these mantras let us first understand what Bija Mantra is and how it is helpful.</string>
+    <string name="bija_mantra">Bija Mantra:</string>
+    <string name="bija_mantra_data">Bija means seed. Bija mantras are one-syllable seed sounds that are meant to be said aloud. These mantras further activate the energy of the chakras, purifies and cleanse them. Bija mantras also balance our mind, body, and soul.</string>
+    <string name="bija_mantra_data2">Time to check which Bija Mantras centers around which chakra and resonate the energy around that chakra:</string>
+
+    <string name="bija_mantra_title">How to Chant Bija Mantra for Chakras?</string>
+    <string name="bija_mantra_title_data">By now you know which mantra activates and resonates energy let us see how to chant them.</string>
+    <string name="bija_mantra_title_data1">* Find a comfortable place.</string>
+    <string name="bija_mantra_title_data2">* Use a tone that is natural and comfortable for you.</string>
+    <string name="bija_mantra_title_data3">* Next, chant the mantra by dividing it into two sounds. Like for Lam you have to say “La-um.”</string>
+    <string name="bija_mantra_title_data4">*You can start at the base (root chakra) and move to the top (crown chakra) or start and end alternatively.</string>
+
+    <string name="mudras_title">Mudras to Cleanse and Balance Chakras</string>
+    <string name="mudras_title_data">To amplify the impact of these mantras and awaken your chakras it is advised that you take the particular mudras.</string>
+
+    <string name="mudras_title_data1">Mudras: </string>
+    <string name="mudras_title_data2">Mudras are special hand positions that send energy to our particular chakra points. Each finger of our hand is also associated with one of the five universal elements. </string>
+    <string name="mudras_title_data3">* Fire-</string>
+    <string name="mudras_title_data4">The thumb relates to the fire element, connected to the solar plexus chakra.</string>
+
+    <string name="mudras_title_data5">* Air- </string>
+    <string name="mudras_title_data6">The index finger represents the air element, connected to the heart chakra. </string>
+    <string name="mudras_title_data7">* Space- </string>
+    <string name="mudras_title_data8">The middle finger represents the space element, connected to the throat chakra. </string>
+    <string name="mudras_title_data9">* Earth- </string>
+    <string name="mudras_title_data10"> The ring finger represents the earth element, connected to the root chakra.</string>
+    <string name="mudras_title_data11">* Water-  </string>
+    <string name="mudras_title_data12">The pinky finger represents the water element, connected to the sacral chakra. </string>
+    <string name="mudras_title_data13">Mudras direct the flow of energy.</string>
+
+
+    <string name="mudras1">1. The Muladhara Mudra :Root Chakra</string>
+    <string name="mudras1_data">Put your hands on the knees with your arms straight. Touch your and index fingers. Now chant LAM.</string>
+
+    <string name="mudras2">2. The Shakti Mudra: Sacral/Svadhisthana Chakra</string>
+    <string name="mudras2_data">Put your hands on top of each other with your palms up and place them in the center of your lap. The left hand should be underneath your right one and the tips of the thumb touch gently. Then chant VAM.</string>
+
+    <string name="mudras3">3. The Rudra Mudra: Solar Plexus/Manipura Chakra</string>
+    <string name="mudras3_data">Place your hands in front of your stomach (slightly above the navel and below the heart). Let the fingers join at the tops, all pointing away from you, and thumbs crossing over. Chant the mantra RAM.</string>
+
+    <string name="mudras4">4. The Padma Mudra: Heart /Anahata Chakra</string>
+    <string name="mudras4_data">Take your right hand, touch the tip of your index finger with the thumb. Place it in front of the center point of your chest. Put your left hand on your left knee. Now chant YAM.</string>
+
+    <string name="mudras5">5. The Granthita Mudra: Vishuddha/Throat Chakra</string>
+    <string name="mudras5_data">Criss-cross your right-hand fingers with the left-hand ones (without thumbs). Pull your thumbs slightly up and let their tops touch. Chant HAM in this mudra.</string>
+
+    <string name="mudras6">6. The Mudra of the Great Head: Third-Eye/Ajna Chakra</string>
+    <string name="mudras6_data">Place your hands before the lower part of your chest. The middle fingers are straight, touching the tips, and pointing forward. Bend the other fingers and let them join at the first bend. The thumb tips will be joined and pointing toward you. Chant the mantra OM or AUM.</string>
+
+    <string name="mudras7">7. The Mudra of A Thousand Petals: Sahasrara/Crown Chakra</string>
+    <string name="mudras7_data">Put your hands right in front of your stomach. With your ring finger pointing up and touching the tops, cross the rest of your fingers. Chant SO-HAM.</string>
+
+
+</resources>

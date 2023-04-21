@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity2">
+
+    <!--    Tital-->
+    <TextView
+        android:id="@+id/txtTital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15sp"
+        android:text="File Manager"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <!--    Settings-->
+    <ImageView
+        android:id="@+id/imgSetting"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
+        android:layout_alignParentRight="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/seatting" />
+
+    <!--Search-->
+    <ImageView
+        android:id="@+id/imgSearch"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="85dp"
+        android:src="@drawable/search1" />
+
+    <!--Video Image-->
+    <ImageView
+        android:id="@+id/imgVideo"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:layout_below="@+id/txtTital"
+        android:layout_marginLeft="60sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginRight="20sp"
+        android:src="@drawable/video" />
+
+    <!--    Video Tital-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgVideo"
+        android:paddingLeft="65sp"
+        android:paddingTop="10sp"
+        android:text="Videos"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!--    Musics Image-->
+    <ImageView
+        android:id="@+id/imgMusics"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:layout_below="@+id/txtTital"
+        android:layout_marginHorizontal="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_toRightOf="@+id/imgVideo"
+        android:src="@drawable/music1" />
+
+
+    <!--    Musics Tital-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgPictures"
+        android:paddingLeft="185sp"
+        android:paddingTop="10sp"
+        android:text="Musics"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!--    Pictures Image-->
+    <ImageView
+        android:id="@+id/imgPictures"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:layout_below="@+id/txtTital"
+        android:layout_marginHorizontal="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_toRightOf="@+id/imgMusics"
+        android:src="@drawable/pictures" />
+
+
+    <!--    Pictures Tital-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgMusics"
+        android:paddingLeft="300sp"
+        android:paddingTop="10sp"
+        android:text="Pictures"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!--Ducument Image-->
+    <ImageView
+        android:id="@+id/imgDocument"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:layout_below="@+id/imgVideo"
+        android:layout_marginLeft="60sp"
+        android:layout_marginTop="50sp"
+        android:layout_marginRight="20sp"
+        android:src="@drawable/documents" />
+
+    <!--    Document Tital-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgDocument"
+        android:paddingLeft="60sp"
+        android:paddingTop="10sp"
+        android:text="Document"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!--    Safe Fill Image-->
+    <ImageView
+        android:id="@+id/imgSafeFile"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:layout_below="@+id/imgMusics"
+        android:layout_marginHorizontal="20sp"
+        android:layout_marginTop="50sp"
+        android:layout_toRightOf="@+id/imgVideo"
+        android:src="@drawable/safefile" />
+
+
+    <!--    Safe File Tital-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgSafeFile"
+        android:paddingLeft="185sp"
+        android:paddingTop="10sp"
+        android:text="Safe File"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!--    Zip File Image-->
+    <ImageView
+        android:id="@+id/imgZipFile"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:layout_below="@+id/imgPictures"
+        android:layout_marginHorizontal="20sp"
+        android:layout_marginTop="50sp"
+        android:layout_toRightOf="@+id/imgMusics"
+        android:src="@drawable/zip" />
+
+
+    <!--    Zip File Tital-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgZipFile"
+        android:paddingLeft="300sp"
+        android:paddingTop="10sp"
+        android:text="Zip File"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <!--Local File Image-->
+    <ImageView
+        android:id="@+id/imgLocalFile"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:layout_below="@+id/imgDocument"
+        android:layout_marginLeft="40sp"
+        android:layout_marginTop="80sp"
+        android:src="@drawable/file" />
+
+    <!--    Local File Tital-1-->
+    <TextView
+        android:id="@+id/txtLocal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgSafeFile"
+        android:layout_marginLeft="10sp"
+        android:layout_toRightOf="@id/imgLocalFile"
+        android:paddingTop="100sp"
+        android:text="Local File"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!--    Local File Tital-2-->
+    <TextView
+        android:id="@+id/txtLocal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgZipFile"
+        android:layout_toRightOf="@id/txtLocal1"
+        android:paddingTop="105sp"
+        android:text=" Device Storege,SD Card"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <!--    Local File Arro Imges-->
+    <ImageView
+        android:id="@+id/imgLocal_arro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgZipFile"
+        android:layout_marginTop="100sp"
+        android:layout_toRightOf="@+id/txtLocal2"
+        android:paddingLeft="10sp"
+        android:src="@drawable/arro_1" />
+
+    <!--    Cleanup Image-->
+    <ImageView
+        android:id="@+id/imgCleanup"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/imgLocalFile"
+        android:layout_marginLeft="40dp"
+        android:src="@drawable/cleanup"
+        app:tint="#00897B" />
+
+    <!--    Cleanup Tital-1-->
+    <TextView
+        android:id="@+id/txtCleanup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtLocal1"
+        android:layout_toRightOf="@id/imgCleanup"
+        android:paddingLeft="25sp"
+        android:paddingTop="20sp"
+        android:text="Cleanup"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!--    Cleanup Tital-2-->
+    <TextView
+        android:id="@+id/txtCleanup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtLocal2"
+        android:layout_toRightOf="@id/txtCleanup1"
+        android:paddingLeft="20sp"
+        android:paddingTop="30sp"
+        android:text=" 20.36GB Avilable"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <!--    Cleanup Arro Imges-->
+    <ImageView
+        android:id="@+id/imgClen_arro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgLocal_arro"
+        android:layout_marginTop="30sp"
+        android:layout_toRightOf="@+id/txtLocal2"
+        android:paddingLeft="10sp"
+        android:src="@drawable/arro_1" />
+
+    <!--    Recent Tital-->
+    <TextView
+        android:id="@+id/txtRecent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgCleanup"
+        android:paddingLeft="20sp"
+        android:paddingTop="30sp"
+        android:text=" Recent(30 days)"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+    <!--    View image-->
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
+        android:layout_below="@+id/imgClen_arro"
+        android:layout_alignParentRight="true"
+        android:layout_marginHorizontal="20sp"
+        android:layout_marginTop="35sp"
+        android:src="@drawable/view" />
+
+    <!--Refresh image-->
+    <ImageView
+        android:id="@+id/imgRefresh"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_below="@+id/txtCleanup2"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="35sp"
+        android:layout_marginRight="85sp"
+        android:src="@drawable/refresh" />
+
+    <!--    Download icon-->
+    <ImageView
+        android:id="@+id/imgDownload"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_below="@id/txtRecent"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="35sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="20sp"
+        android:src="@drawable/download" />
+
+    <!--    Downlod text-1-->
+    <TextView
+        android:id="@+id/txtDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtRecent"
+        android:layout_marginTop="25sp"
+        android:layout_toRightOf="@+id/imgDownload"
+        android:text="Abc download.apk"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    <!--    Downlod text-2-->
+    <TextView
+        android:id="@+id/txtDownload2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDownload"
+        android:layout_marginLeft="95sp"
+        android:text="10.20MB"
+        android:textSize="20sp" />
+
+    <!--    Image icon-->
+    <ImageView
+        android:id="@+id/imgImage"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_below="@id/imgDownload"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="20sp"
+        android:src="@drawable/pictures" />
+
+    <!--    Image text-1-->
+    <TextView
+        android:id="@+id/txtImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDownload"
+        android:layout_marginTop="45sp"
+        android:layout_toRightOf="@+id/imgDownload"
+        android:text=" Pictures.png"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    <!--    Image text-2-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtImage"
+        android:layout_marginLeft="95sp"
+        android:text="5.20MB"
+        android:textSize="20sp" />
+
+</RelativeLayout>
