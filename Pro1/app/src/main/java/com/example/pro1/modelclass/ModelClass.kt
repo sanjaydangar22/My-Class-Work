@@ -11,7 +11,8 @@ data class AddItemModelClass(
 
     var id: Int,
     var itemName: String,
-
-    var price: String
+    var qty: String,
+    var price: String,
+    var total: String
 
 )

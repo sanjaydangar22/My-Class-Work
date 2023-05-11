@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:layout_marginHorizontal="@dimen/_5sdp"
         android:layout_marginVertical="@dimen/_5sdp"
-        app:cardBackgroundColor="#6FC3E8"
+        app:cardBackgroundColor="#B6DFF1"
         app:cardCornerRadius="@dimen/_10sdp">
 
         <!--        <LinearLayout-->
@@ -27,7 +27,7 @@
             android:padding="@dimen/_5sdp">
 
             <TextView
-                android:id="@+id/txtID"
+                android:id="@+id/txtIDShow"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
@@ -36,65 +36,53 @@
                 android:textSize="@dimen/_15ssp"
                 tools:text="1" />
 
-            <EditText
-                android:id="@+id/edtItemName"
+            <TextView
+                android:id="@+id/txtItemNameShow"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_weight="2.5"
                 android:gravity="center"
-                android:imeOptions="actionNext"
-                android:inputType="text"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_18ssp"
                 tools:text="Item" />
 
-            <EditText
-                android:id="@+id/edtQty"
+            <TextView
+                android:id="@+id/txtQtyShow"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:imeOptions="actionNext"
-                android:inputType="number"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_18ssp"
                 tools:text="2" />
 
-            <EditText
-                android:id="@+id/edtPrice"
+            <TextView
+                android:id="@+id/txtPriceShow"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:imeOptions="actionNext"
-                android:inputType="number"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_18ssp"
                 tools:text="120" />
 
-            <EditText
-                android:id="@+id/edtTotalItem"
+            <TextView
+                android:id="@+id/txtTotalItemShow"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:imeOptions="actionNext"
-                android:inputType="number"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_18ssp"
                 tools:text="1200" />
 
         </LinearLayout>
 
-        <!--        <LinearLayout-->
-        <!--            android:layout_width="10dp"-->
-        <!--            android:layout_height="match_parent"-->
-        <!--            android:layout_gravity="end"-->
-        <!--            android:background="#FF8A80" />-->
+
     </androidx.cardview.widget.CardView>
 
 

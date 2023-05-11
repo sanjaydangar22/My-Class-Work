@@ -57,13 +57,16 @@ class CategoryListActivity : AppCompatActivity() {
                 db.insertCategory(itemName, p_Price, s_Price)      //data store in sqlite database
 
                 Toast.makeText(this, "your data save", Toast.LENGTH_SHORT).show()
-                var list = db.displayCategory()    //data display
+
 
                 updatefunction()   //define function
+
+
                 var manger = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
                 categoryBinding.rcvCategory.layoutManager = manger
                 categoryBinding.rcvCategory.adapter = adapter
 
+                var list = db.displayCategory()    //data display
                 adapter.update(list)  //list pass in adapter class in function
                 dialog.dismiss()
             }
@@ -78,6 +81,8 @@ class CategoryListActivity : AppCompatActivity() {
             )
             dialog.show()
         }
+
+
 
     }
 
@@ -113,5 +118,6 @@ class CategoryListActivity : AppCompatActivity() {
             updatedialog.show()
 
         }
+
     }
 }

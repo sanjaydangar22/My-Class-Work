@@ -35,10 +35,18 @@
             android:layout_marginStart="@dimen/_80sdp"
             android:src="@drawable/done" />
     </androidx.appcompat.widget.Toolbar>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        android:layout_width="@dimen/_100sdp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:hint="Date"
@@ -199,7 +207,7 @@
             android:textStyle="bold" />
 
         <EditText android:id="@+id/edtPriceAdd"
-            android:imeOptions="actionDone"
+            android:imeOptions="actionNext"
             android:inputType="number"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -229,6 +237,14 @@
         android:layout_marginHorizontal="@dimen/_10sdp"
         android:text="Add"
         android:textStyle="bold" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:id="@+id/btnDisplayItem"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:text="Display"
+            android:textStyle="bold" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -253,4 +269,6 @@
             android:textSize="@dimen/_15ssp"
             tools:text="2023" />
     </LinearLayout>
+    </LinearLayout>
+</ScrollView>
 </LinearLayout>

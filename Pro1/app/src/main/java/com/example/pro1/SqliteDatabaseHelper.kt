@@ -18,8 +18,10 @@ class SqliteDatabaseHelper(context: Context) : SQLiteOpenHelper(context, "DataBa
             "create table categoryTB(category_ID integer Primary Key Autoincrement,itemName text,p_price text,s_price text)"
         db?.execSQL(categoryTable)
 
-        var salleTable="Create table  salleTB(salle_Id integer Primary Key Autoincrement,itemNameS text,s_priceS text)"
-        db?.execSQL(salleTable)
+        var salesTable =
+            "create table salesTb(sales_Id integer Primary Key Autoincrement,itemNameS text,qtyS text,priceS text,totalS text)"
+        db?.execSQL(salesTable)
+
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
@@ -35,11 +37,12 @@ class SqliteDatabaseHelper(context: Context) : SQLiteOpenHelper(context, "DataBa
         contentValues.put("s_price", s_Price)
         db.insert("categoryTB", null, contentValues)
 
-
     }
 
     fun displayCategory(): ArrayList<CategoryModelClass> {
+
         categoryList.clear()
+
         var db = readableDatabase
         var sql = "select * from categoryTB"
         var cursor = db.rawQuery(sql, null)
@@ -53,7 +56,7 @@ class SqliteDatabaseHelper(context: Context) : SQLiteOpenHelper(context, "DataBa
 
                 var model = CategoryModelClass(id, itemName, p_Price, s_Price)
 
-                Log.e("TAG", "data: $itemName $p_Price $s_Price")
+                Log.e("displayCategory", "data: $itemName $p_Price $s_Price")
                 categoryList.add(model)
             } while (cursor.moveToNext())
         } else {
@@ -69,48 +72,55 @@ class SqliteDatabaseHelper(context: Context) : SQLiteOpenHelper(context, "DataBa
             "update categoryTB set itemName='$newItem' ,p_price='$newpPrice',s_price='$newsPrice'  where category_ID='$idNumber' "
         update.execSQL(updateSql)
     }
+
     fun deleteRecord(id: Int) {
         var delete = writableDatabase
         var sqlDelete = "delete from categoryTB where category_ID='$id' "
         delete.execSQL(sqlDelete)
     }
 
-
-    fun insertSalleBill(itemNameS: String,  s_PriceS: String) {
+    fun insertSalesData(itemS: String, qtyS: String, priceS: String, totalS: String) {
         var db = writableDatabase
-        var contentValues = ContentValues()
+        var c = ContentValues()
 
-        contentValues.put("itemNameS", itemNameS)
-        contentValues.put("s_priceS", s_PriceS)
-        db.insert("salleTB", null, contentValues)
+        c.put("itemNameS", itemS)
+        c.put("qtyS", qtyS)
+        c.put("priceS", priceS)
+        c.put("totalS", totalS)
+        db.insert("salesTb", null, c)
 
-        Log.e("TAG", "insertSalleBill: $itemNameS")
-        Log.e("TAG", "insertSalleBill: $s_PriceS")
-
+        Log.e("insertSalesData", "itemNameS:- " + itemS)
+        Log.e("insertSalesData", "qtyS:- " + qtyS)
+        Log.e("insertSalesData", "priceS:- " + priceS)
+        Log.e("insertSalesData", "totalS:- " + totalS)
     }
-    fun displaySalleBill(): ArrayList<AddItemModelClass> {
-        salleList.clear()
+
+    fun displaySalesData(): ArrayList<AddItemModelClass> {
         var db = readableDatabase
-        var sql = "select * from salleTB"
-        var cursor = db.rawQuery(sql, null)
-        if (cursor.count > 0) {
-            cursor.moveToFirst()
+        var sql = "select * from salesTb"
+        var cursorS = db.rawQuery(sql, null)
+        if (cursorS.count > 0) {
+            cursorS.moveToFirst()
             do {
-                var id = cursor.getInt(0)
-                var itemNameS = cursor.getString(1)
-//                var qty = cursor.getString(2)
-                var s_PriceS = cursor.getString(2)
-//                var total = cursor.getString(4)
+                var id = cursorS.getInt(0)
+                var itemName = cursorS.getString(1)
+                var qty = cursorS.getString(2)
+                var price = cursorS.getString(3)
+                var total = cursorS.getString(4)
 
-                var model = AddItemModelClass(id, itemNameS,s_PriceS)
-
-                Log.e("TAG", "data: $itemNameS $s_PriceS")
+                var model = AddItemModelClass(id, itemName, qty, price, total)
+                Log.e(
+                    "displaySalesData",
+                    "itemName:- " + itemName + " " + "qty:- " + qty + " " + " " + "price:- " + price
+                )
                 salleList.add(model)
-            } while (cursor.moveToNext())
+            } while (cursorS.moveToNext())
         } else {
-            Log.e("TAG", "No data Found")
+            Log.e("displaySalesData", "No data Found ")
         }
-
         return salleList
+
     }
+
+
 }
