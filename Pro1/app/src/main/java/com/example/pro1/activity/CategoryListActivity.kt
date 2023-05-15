@@ -34,11 +34,11 @@ class CategoryListActivity : AppCompatActivity() {
 
     private fun initView() {
         categoryBinding.imgBack.setOnClickListener{   //back button
-            var i= Intent(this,PracticeActivity::class.java)
+            var i= Intent(this,HomeActivity::class.java)
             startActivity(i)
         }
         categoryBinding.imgDone.setOnClickListener{    // activity done
-            var i= Intent(this,PracticeActivity::class.java)
+            var i= Intent(this,HomeActivity::class.java)
             startActivity(i)
             Toast.makeText(this, "your category added", Toast.LENGTH_SHORT).show()
         }

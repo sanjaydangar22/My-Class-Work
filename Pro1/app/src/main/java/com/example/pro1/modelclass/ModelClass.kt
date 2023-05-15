@@ -16,3 +16,10 @@ data class AddItemModelClass(
     var total: String
 
 )
+data class CustomerNameModelClass(
+
+    var id: Int,
+    var customerName: String,
+
+
+)

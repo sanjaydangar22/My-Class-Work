@@ -49,7 +49,7 @@ class UpdatePageActivity : AppCompatActivity() {
 
     private fun initView() {
         updateBinding.imgBack.setOnClickListener{  //activity back define
-            var i= Intent(this,PracticeActivity::class.java)
+            var i= Intent(this,HomeActivity::class.java)
             startActivity(i)
         }
         updateBinding.imgDone.setOnClickListener {
