@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Gravity
 import android.widget.LinearLayout
 import android.widget.Toast
@@ -15,12 +16,24 @@ import com.example.pro1.adapterclass.CategoryAdapterClass
 import com.example.pro1.databinding.ActivityCategoryListBinding
 import com.example.pro1.databinding.DialogCategoryAddBinding
 import com.example.pro1.databinding.DialogCategoryUpdateBinding
+import com.example.pro1.modelclass.AddItemModelClass
+import com.example.pro1.modelclass.CategoryModelClass
+import com.example.pro1.utilti.FirestroreHelper
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.gms.tasks.Task
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.firestore.QuerySnapshot
 
 class CategoryListActivity : AppCompatActivity() {
 
     lateinit var categoryBinding: ActivityCategoryListBinding  //activity binding
     lateinit var db: SqliteDatabaseHelper   //define database class
     lateinit var adapter: CategoryAdapterClass   //define adapter class
+    companion object{
+        var categoryList = ArrayList<CategoryModelClass>()
+    }
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,17 +41,19 @@ class CategoryListActivity : AppCompatActivity() {
         setContentView(categoryBinding.root) //set xml file
 
         db = SqliteDatabaseHelper(this)  //data base class in set context class
+        FirebaseAnalytics.getInstance(this)
 
         initView()
+        getProducts()
     }
 
     private fun initView() {
-        categoryBinding.imgBack.setOnClickListener{   //back button
-            var i= Intent(this,HomeActivity::class.java)
+        categoryBinding.imgBack.setOnClickListener {   //back button
+            var i = Intent(this, HomeActivity::class.java)
             startActivity(i)
         }
-        categoryBinding.imgDone.setOnClickListener{    // activity done
-            var i= Intent(this,HomeActivity::class.java)
+        categoryBinding.imgDone.setOnClickListener {    // activity done
+            var i = Intent(this, HomeActivity::class.java)
             startActivity(i)
             Toast.makeText(this, "your category added", Toast.LENGTH_SHORT).show()
         }
@@ -49,13 +64,13 @@ class CategoryListActivity : AppCompatActivity() {
             dialog.setContentView(dialogBinding.root)  //dialog in xml file set
 
             dialogBinding.btnSet.setOnClickListener {
-
+                var id = 0
                 var itemName = dialogBinding.edtItem.text.toString()   //variable define
                 var p_Price = dialogBinding.edtPPrice.text.toString()   //variable define
                 var s_Price = dialogBinding.edtSPrice.text.toString()   //variable define
-
-                db.insertCategory(itemName, p_Price, s_Price)      //data store in sqlite database
-
+                addProducts(dialogBinding)
+//                db.insertCategory(itemName, p_Price, s_Price)      //data store in sqlite database
+//                categoryList.add(CategoryModelClass( itemName, p_Price, s_Price))
                 Toast.makeText(this, "your data save", Toast.LENGTH_SHORT).show()
 
 
@@ -66,8 +81,8 @@ class CategoryListActivity : AppCompatActivity() {
                 categoryBinding.rcvCategory.layoutManager = manger
                 categoryBinding.rcvCategory.adapter = adapter
 
-                var list = db.displayCategory()    //data display
-                adapter.update(list)  //list pass in adapter class in function
+//                var list = db.displayCategory()    //data display
+                adapter.update(categoryList)  //list pass in adapter class in function
                 dialog.dismiss()
             }
             dialogBinding.btnCancel.setOnClickListener {
@@ -81,7 +96,6 @@ class CategoryListActivity : AppCompatActivity() {
             )
             dialog.show()
         }
-
 
 
     }
@@ -102,7 +116,7 @@ class CategoryListActivity : AppCompatActivity() {
             dialogBinding.imgEdite.setOnClickListener {
 
                 var i = Intent(this, UpdatePageActivity::class.java)
-                i.putExtra("id_no", click.id)  //set new value and update key pass
+//                i.putExtra("id_no", click.id)  //set new value and update key pass
                 i.putExtra("itemName", click.itemName)  //set new value and update key pass
                 i.putExtra("p_Price", click.p_Price)  //set new value and update key pass
                 i.putExtra("s_Price", click.s_Price)  //set new value and update key pass
@@ -119,5 +133,39 @@ class CategoryListActivity : AppCompatActivity() {
 
         }
 
+    }
+
+    fun addProducts(dialogBinding: DialogCategoryAddBinding) {
+        var hashMap= hashMapOf<String,Any>(
+            "ProductName" to dialogBinding.edtItem.text.toString(),
+            "ProductCostPrice" to dialogBinding.edtPPrice.text.toString(),
+            "ProductSalePrice" to dialogBinding.edtSPrice.text.toString(),
+        )
+        FirestroreHelper.firedatabase.collection("Shops")
+            .document("Shop Name")
+            .collection("Products")
+            .add(hashMap)
+    }
+
+    fun getProducts() {
+
+        FirestroreHelper.firedatabase.collection("Shops")
+            .document("Shop Name")
+            .collection("Products")
+            .get()
+            .addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        for (i in it.result) {
+                            Log.e("onComplete: ", i.id)
+                            var itemName = i.get("ProductName").toString()
+                            var p_price = i.get("ProductCostPrice").toString()
+                            var price = i.get("ProductSalePrice").toString()
+//
+
+                            categoryList.add(CategoryModelClass(itemName,p_price,  price))
+                        }
+                    }
+
+            }
     }
 }

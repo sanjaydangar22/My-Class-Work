@@ -3,21 +3,18 @@ plugins {
 }
 
 android {
-<<<<<<<< HEAD:Recyclerview/app/build.gradle
     namespace 'com.example.recyclerview'
     compileSdk 33
 
     defaultConfig {
         applicationId "com.example.recyclerview"
         minSdk 22
-========
-    namespace 'com.example.sdtube'
-    compileSdk 33
-
+        namespace 'com.example.sdtube'
+        compileSdk 33
+    }
     defaultConfig {
         applicationId "com.example.sdtube"
         minSdk 21
->>>>>>>> parent of 253a331 (update):SdTube/app/build.gradle
         targetSdk 33
         versionCode 1
         versionName "1.0"

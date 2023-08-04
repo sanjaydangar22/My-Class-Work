@@ -8,6 +8,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pro1.R
+import com.example.pro1.modelclass.AddItemModelClass
 import com.example.pro1.modelclass.CategoryModelClass
 
 class ItemSuggestionAdapter(

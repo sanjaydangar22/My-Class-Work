@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pro1.databinding.ActivityHomeBinding
-import com.example.pro1.databinding.AddDetailsListBinding
 
 
 class HomeActivity : AppCompatActivity() {

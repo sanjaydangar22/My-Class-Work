@@ -6,14 +6,16 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
 import com.example.pro1.modelclass.AddItemModelClass
+import com.example.pro1.modelclass.BillModelClass
 import com.example.pro1.modelclass.CategoryModelClass
 import com.example.pro1.modelclass.CustomerNameModelClass
 
-class SqliteDatabaseHelper(context: Context) : SQLiteOpenHelper(context, "MyBillingDatabase", null, 1) {
+class SqliteDatabaseHelper(context: Context) : SQLiteOpenHelper(context, "MyDatabase", null, 1) {
 
     var categoryList = ArrayList<CategoryModelClass>()
     var salleList = ArrayList<AddItemModelClass>()
     var customerList = ArrayList<CustomerNameModelClass>()
+    var billList = ArrayList<BillModelClass>()
     override fun onCreate(db: SQLiteDatabase?) {
 
         var categoryTable =
@@ -28,6 +30,8 @@ class SqliteDatabaseHelper(context: Context) : SQLiteOpenHelper(context, "MyBill
             "create table customerTb(customer_Id integer Primary Key Autoincrement,CustomerName text)"
         db?.execSQL(customerTable)
 
+        var billTable ="create table billTb(bill_Id integer Primary Key Autoincrement,date text,customerNameB text,itemNameB text,qtyB text,priceB text,totalB text,mainTotalB text)"
+        db?.execSQL(billTable)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
@@ -60,7 +64,7 @@ class SqliteDatabaseHelper(context: Context) : SQLiteOpenHelper(context, "MyBill
             var p_Price = cursor.getString(2)
             var s_Price = cursor.getString(3)
 
-            var model = CategoryModelClass(id, itemName, p_Price, s_Price)
+            var model = CategoryModelClass( itemName, p_Price, s_Price)
 
             Log.e("displayCategory", "data: $itemName $p_Price $s_Price")
             categoryList.add(model)
@@ -117,7 +121,7 @@ class SqliteDatabaseHelper(context: Context) : SQLiteOpenHelper(context, "MyBill
                 var price = cursor.getString(3)
                 var total=cursor.getString(4)
 
-                var model = AddItemModelClass(id, itemName, qty, price,total)
+                var model = AddItemModelClass( itemName, qty, price,total)
 
                 Log.e("displaySalesData", "data: $itemName $qty $price")
                 salleList.add(model)
@@ -165,4 +169,57 @@ class SqliteDatabaseHelper(context: Context) : SQLiteOpenHelper(context, "MyBill
         return customerList
     }
 
+    fun insertBillData(date:String,customerNameB: String,itemB: String, qtyB: String, priceB: String, totalB: String,mainTotalB :String) {
+        var db = writableDatabase
+        var c = ContentValues()
+
+
+        c.put("date", date)
+        c.put("customerNameB", customerNameB)
+        c.put("itemB", itemB)
+        c.put("qtyB", qtyB)
+        c.put("priceB", priceB)
+        c.put("totalB", totalB)
+        c.put("mainTotalB", mainTotalB)
+        db.insert("billTb", null, c)
+
+        Log.e("insertBillData", "date:- " + date)
+        Log.e("insertBillData", "customerNameB:- " + customerNameB)
+        Log.e("insertBillData", "itemB:- " + itemB)
+        Log.e("insertBillData", "qtyB:- " + qtyB)
+        Log.e("insertBillData", "priceB:- " + priceB)
+        Log.e("insertBillData", "totalB:- " + totalB)
+        Log.e("insertBillData", "mainTotalB:- " + mainTotalB)
+    }
+
+    fun displayBillData(): ArrayList<BillModelClass> {
+
+        billList.clear()
+
+        var db = readableDatabase
+        var sql = "select * from billTb"
+        var cursor = db.rawQuery(sql, null)
+        if (cursor.count > 0) {
+            cursor.moveToFirst()
+            do {
+                var id = cursor.getInt(0)
+                var date = cursor.getString(1)
+                var customerName = cursor.getString(2)
+                var itemName = cursor.getString(3)
+                var qty = cursor.getString(4)
+                var price = cursor.getString(5)
+                var total=cursor.getString(6)
+                var mainTotal=cursor.getString(7)
+
+                var model = BillModelClass(id,date, customerName,itemName, qty, price,total,mainTotal)
+
+                Log.e("displayBillData", "data:$id $date $customerName $itemName $qty $price")
+                billList.add(model)
+            } while (cursor.moveToNext())
+        } else {
+            Log.e("TAG", "No data Found")
+        }
+
+        return billList
+    }
 }

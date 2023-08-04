@@ -12,9 +12,9 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-<<<<<<<< HEAD:Interface/settings.gradle
+
 rootProject.name = "Interface"
-========
+
 rootProject.name = "SdTube"
->>>>>>>> parent of 253a331 (update):SdTube/settings.gradle
+
 include ':app'

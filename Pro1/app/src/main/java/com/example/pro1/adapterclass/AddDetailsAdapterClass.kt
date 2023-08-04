@@ -9,6 +9,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pro1.R
 import com.example.pro1.modelclass.AddItemModelClass
+import com.example.pro1.modelclass.ProductModel
+import com.example.pro1.utilti.FirestroreHelper
 
 
 class AddDetailsAdapterClass() : RecyclerView.Adapter<AddDetailsAdapterClass.MyViewHolder>() {
@@ -36,7 +38,7 @@ class AddDetailsAdapterClass() : RecyclerView.Adapter<AddDetailsAdapterClass.MyV
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.txtIDShow.text = list[position].id.toString()
+//        holder.txtIDShow.text = list[position].id.toString()
         holder.txtItemNameShow.text = list[position].itemName
         holder.txtQtyShow.text = list[position].qty
         holder.txtPriceShow.text = list[position].price
@@ -55,6 +57,7 @@ class AddDetailsAdapterClass() : RecyclerView.Adapter<AddDetailsAdapterClass.MyV
         list = list1
         notifyDataSetChanged()
     }
+
 
 
 }

@@ -21,10 +21,15 @@ import com.example.pro1.adapterclass.CustomerSuggestionAdapter
 import com.example.pro1.adapterclass.ItemSuggestionAdapter
 import com.example.pro1.databinding.ActivityAddDetailsBinding
 import com.example.pro1.databinding.DialogCategoryAddBinding
-import com.example.pro1.modelclass.CategoryModelClass
-import com.example.pro1.modelclass.CustomerNameModelClass
+import com.example.pro1.modelclass.*
+import com.example.pro1.utilti.FirestroreHelper
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.gms.tasks.Task
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.firestore.QuerySnapshot
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.ArrayList
 
 
 class AddDetailsActivity : AppCompatActivity() {
@@ -34,16 +39,25 @@ class AddDetailsActivity : AppCompatActivity() {
 //    var list1 = ArrayList<AddItemModelClass>()
 
     var addItemAdapter = AddDetailsAdapterClass()
-
+    var ProductList = ArrayList<AddItemModelClass>()
+    var customerName = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         detailsBinding = ActivityAddDetailsBinding.inflate(layoutInflater)
         setContentView(detailsBinding.root)
         dbB = SqliteDatabaseHelper(this)
 
+
+        FirebaseAnalytics.getInstance(this)
+//        getProducts()
         customerName()
+
         initView()
+
+        billView()
+
     }
+
 
     private fun customerName() {
         detailsBinding.rcvItemSuggestion.layoutManager =
@@ -55,10 +69,11 @@ class AddDetailsActivity : AppCompatActivity() {
                 detailsBinding.rcvItemSuggestion.visibility = View.VISIBLE
                 detailsBinding.txtAddNewItem.visibility = View.VISIBLE
                 detailsBinding.txtAddNewItem.setOnClickListener {
-                    var customerName = detailsBinding.edtCName.text.toString()
+                    customerName = detailsBinding.edtCName.text.toString()
 
                     dbB.insertCustomer(customerName)
                     Toast.makeText(this, "Customer Name added", Toast.LENGTH_SHORT).show()
+
 
                 }
                 dbB.displayCustomer().forEach {
@@ -82,7 +97,11 @@ class AddDetailsActivity : AppCompatActivity() {
         //static date Format
         val simpleDateFormat = SimpleDateFormat("dd/MM/yyyy")
         val currentDateFormat: String = simpleDateFormat.format(Date())
-        detailsBinding.edtDate.setText(currentDateFormat)
+        var date = ""
+        date = detailsBinding.edtDate.setText(currentDateFormat).toString()
+
+
+        var billNo = 0
 
 
 
@@ -102,7 +121,7 @@ class AddDetailsActivity : AppCompatActivity() {
                     addNewItem()
 
                 }
-                dbB.displayCategory().forEach {
+                CategoryListActivity.categoryList.forEach {
                     if (it.itemName.startsWith(text.toString())) {
                         val suggestionList = ArrayList<CategoryModelClass>()
                         Log.e("suggestionItem: ", text.toString())
@@ -206,9 +225,10 @@ class AddDetailsActivity : AppCompatActivity() {
 
         detailsBinding.btnAddItem.setOnClickListener {
 
+
             detailsBinding.txtAddNewItem.visibility = View.GONE
             detailsBinding.rcvItemSuggestion.visibility = View.GONE
-
+            var id = 0
             var item = detailsBinding.edtItemAdd.text.toString()
             var qty = detailsBinding.edtQtyAdd.text.toString()
             var price = detailsBinding.edtPriceAdd.text.toString()
@@ -216,9 +236,10 @@ class AddDetailsActivity : AppCompatActivity() {
             if (item.isEmpty()) {
                 Toast.makeText(this, "Value is Empty", Toast.LENGTH_SHORT).show()
             } else {
-                dbB.insertSalesData(item, qty, price, total)
+//                dbB.insertSalesData(item, qty, price, total)
 
-
+//                ProductList.add(AddItemModelClass(item,qty, price, total))
+                uploadInvoice(detailsBinding.edtCName.text.toString())
 //            var model = AddItemModelClass(id, item, qty, price, total)
 //            list1.add(model)
 
@@ -229,8 +250,8 @@ class AddDetailsActivity : AppCompatActivity() {
                 detailsBinding.rcvBill.layoutManager = manger1
                 detailsBinding.rcvBill.adapter = addItemAdapter
 
-                var list1 = dbB.displaySalesData()
-                addItemAdapter.updateList(list1)
+//                var list1 = dbB.displaySalesData()
+                addItemAdapter.updateList(ProductList)
 
                 val total1 = if (detailsBinding.txtTotal.text.toString().isNotEmpty()) {
                     detailsBinding.txtTotal.text.toString().toInt()
@@ -283,6 +304,20 @@ class AddDetailsActivity : AppCompatActivity() {
             LinearLayout.LayoutParams.WRAP_CONTENT
         )
         dialog.show()
+    }
+
+    private fun billView() {
+
+    }
+
+    fun uploadInvoice(customer: String) {
+        FirestroreHelper.firedatabase.collection("Shops")
+            .document("Shop Name")
+            .collection("Customer")
+            .document(customer)
+            .collection("Invoices")
+            .document(System.currentTimeMillis().toString())
+            .set(ProductModel(ProductList))
     }
 
 
